@@ -1,0 +1,86 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Бюро находок</title>
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function() {
+            $('.theme-item').click(function(event){
+                $('.theme-item').removeClass('selected');
+                $(this).addClass('selected');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="site-main-header">
+        <div class="inner">
+            <a href="/" class="logo"></a>
+            <a href="#" class="add-recomendation">Добавить рекомендацию <i class="icn-plus"></i></a>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="inner">
+
+            <aside class="themes-list-holder">
+                <ul class="theme-list">
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-money"></i>
+                        </div>
+                        <span class="theme-name">Деньги</span>
+                    </li>
+                    <li class="theme-item selected">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-games"></i>
+                        </div>
+                        <span class="theme-name">Игры</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-humor"></i>
+                        </div>
+                        <span class="theme-name">Юмор</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-dating"></i>
+                        </div>
+                        <span class="theme-name">Знакомства</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="recs-holder">
+                <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
+                    <h1>Angry Birds</h1>
+                    <p><b>Angry Birds</b> — это игра уже по праву может считаться легендарной. На ее счету огромное количество рекордов, никому не известные разработчики Angry Birds стали популярными на весь мир и до сих пор эта игра прорывается в топы App Store. Стоит признать, что некоторое время назад пользователи оценивали успешность мобильной операционной платформы по наличию в ней именно этой игры.</p>
+                    <p>На днях стало известно, что разработчики собираются выпустить новую версию своей популярной аркады.</p>
+                    <p><a href="#">Видеоролики Angry Birds по-русски</a></p>
+                </article>
+
+                <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6417/31684961.0/0_57719_2d4c6a7_L.jpg" alt=""></a>
+                    <h1>Cut the Rope</h1>
+                    <p>Самая знаменитая игра головоломка Cut the Rope. Со помощью этой знаменитой игры можно развивать логику и абстрактное мышление. Игра основана на физике.</p>
+                    <p>В коробке сидит маленькое зелёное существо АмНям, которое надо кормить леденцами. Леденцы болтаются на веревочках и их надо правильно перерезать, чтобы леденец упал точно в пасть АмНяма, а не мимо.</p>
+                    <p><a href="#">Официальная страница игры</a></p>
+                </article>
+            </section>
+
+        </div><!-- inner -->
+    </section><!-- content -->
+
+    <footer></footer>
+</body>
+</html>
