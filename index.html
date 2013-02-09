@@ -13,9 +13,11 @@
                 $('.theme-item').removeClass('selected');
                 $(this).addClass('selected');
                 if($(this).hasClass('grayBg') == true) {
-                    $('body').removeClass('wood').addClass('gray')
+                    $('body').removeClass().addClass('gray')
                 } else if($(this).hasClass('woodBg') == true) {
-                    $('body').removeClass('gray').addClass('wood')
+                    $('body').removeClass().addClass('wood')
+                } else if($(this).hasClass('blueBg') == true) {
+                    $('body').removeClass().addClass('blue')
                 }
             });
         });
@@ -83,7 +85,7 @@
                         </div>
                         <span class="theme-name">Купоны и скидки</span>
                     </li>
-                    <li class="theme-item">
+                    <!-- <li class="theme-item">
                         <div class="active-arrow"></div>
                         <div class="theme-icon-holder">
                             <i class="theme-icn icn-interesting"></i>
@@ -96,7 +98,7 @@
                             <i class="theme-icn icn-clothes"></i>
                         </div>
                         <span class="theme-name">Одежда и аксесуары </span>
-                    </li>
+                    </li> -->
                     <li class="theme-item selected woodBg">
                         <div class="active-arrow"></div>
                         <span class="theme-name">Дерево</span>
@@ -104,6 +106,10 @@
                     <li class="theme-item grayBg">
                         <div class="active-arrow"></div>
                         <span class="theme-name">Серый</span>
+                    </li>
+                    <li class="theme-item blueBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Синий</span>
                     </li>
                 </ul>
             </aside>
