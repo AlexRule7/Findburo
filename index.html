@@ -12,11 +12,16 @@
             $('.theme-item').click(function(event){
                 $('.theme-item').removeClass('selected');
                 $(this).addClass('selected');
+                if($(this).hasClass('grayBg') == true) {
+                    $('body').removeClass('wood').addClass('gray')
+                } else if($(this).hasClass('woodBg') == true) {
+                    $('body').removeClass('gray').addClass('wood')
+                }
             });
         });
     </script>
 </head>
-<body>
+<body class="wood">
     <header class="site-main-header">
         <div class="inner">
             <a href="/" class="logo"></a>
@@ -36,7 +41,7 @@
                         </div>
                         <span class="theme-name">Cервисы и приложения</span>
                     </li>
-                    <li class="theme-item selected">
+                    <li class="theme-item">
                         <div class="active-arrow"></div>
                         <div class="theme-icon-holder">
                             <i class="theme-icn icn-games"></i>
@@ -91,6 +96,14 @@
                             <i class="theme-icn icn-clothes"></i>
                         </div>
                         <span class="theme-name">Одежда и аксесуары </span>
+                    </li>
+                    <li class="theme-item selected woodBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Дерево</span>
+                    </li>
+                    <li class="theme-item grayBg">
+                        <div class="active-arrow"></div>
+                        <span class="theme-name">Серый</span>
                     </li>
                 </ul>
             </aside>
