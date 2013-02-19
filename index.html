@@ -12,13 +12,6 @@
             $('.theme-item').click(function(event){
                 $('.theme-item').removeClass('selected');
                 $(this).addClass('selected');
-                if($(this).hasClass('grayBg') == true) {
-                    $('body').removeClass().addClass('gray')
-                } else if($(this).hasClass('woodBg') == true) {
-                    $('body').removeClass().addClass('wood')
-                } else if($(this).hasClass('blueBg') == true) {
-                    $('body').removeClass().addClass('blue')
-                }
             });
         });
     </script>
@@ -43,7 +36,7 @@
                         </div>
                         <span class="theme-name">Cервисы и приложения</span>
                     </li>
-                    <li class="theme-item">
+                    <li class="theme-item selected">
                         <div class="active-arrow"></div>
                         <div class="theme-icon-holder">
                             <i class="theme-icn icn-games"></i>
@@ -85,7 +78,7 @@
                         </div>
                         <span class="theme-name">Купоны и скидки</span>
                     </li>
-                    <!-- <li class="theme-item">
+                    <li class="theme-item">
                         <div class="active-arrow"></div>
                         <div class="theme-icon-holder">
                             <i class="theme-icn icn-interesting"></i>
@@ -98,23 +91,19 @@
                             <i class="theme-icn icn-clothes"></i>
                         </div>
                         <span class="theme-name">Одежда и аксесуары </span>
-                    </li> -->
-                    <li class="theme-item selected woodBg">
-                        <div class="active-arrow"></div>
-                        <span class="theme-name">Дерево</span>
-                    </li>
-                    <li class="theme-item grayBg">
-                        <div class="active-arrow"></div>
-                        <span class="theme-name">Серый</span>
-                    </li>
-                    <li class="theme-item blueBg">
-                        <div class="active-arrow"></div>
-                        <span class="theme-name">Синий</span>
                     </li>
                 </ul>
             </aside>
 
-            <section class="recs-holder">
+            <section class="recs-holder not-signed-in">
+                <div class="main-banner">
+                    <span class="banner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore madkdwk Lorem ipsum dolor sekcnpmkp.</span>
+                    <div class="banner-btn-holder">
+                        <a href="#" class="small-btn red-btn">Зарегистрироваться</a>
+                        <a href="#" class="small-btn gray-btn">Войти</a>
+                    </div>
+                </div>
+
                 <article class="rec">
                     <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
                     <h1>Angry Birds</h1>

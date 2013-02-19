@@ -126,6 +126,62 @@ strong, b
         +opacity(1)
 
 
+// Banner
+.main-banner
+    background: #fff8b9
+    +background-image(linear-gradient(top, #fff9b5, #fff8b9 50%, #fff9cf))
+    display: none
+    height: 60px
+    width: 630px
+    margin-left: 35px
+    +border-bottom-radius(3px)
+    +box-shadow(rgba(black,.3) 0 1px 2px 0)
+    position: fixed
+    top: 40px
+    z-index: 5
+.banner-text
+    font-size: 1.4em
+    line-height: 1.2em
+    vertical-align: middle
+    display: table-cell
+    width: 350px
+    height: 60px
+    padding: 0 15px
+.banner-btn-holder
+    position: absolute
+    top: 15px
+    right: 10px
+    z-index: 5
+    .small-btn
+        margin-right: 5px
+
+
+// Buttons
+.small-btn
+    font-size: 1.4em
+    font-weight: bold
+    display: inline-block
+    padding: 4px 10px
+    +border-radius(3px)
+    +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(white,.3) 0 2px 0px 0px)
+.red-btn
+    color: #fff !important
+    text-shadow: 0 1px 0 rgba(black,.3)
+    +background-image(linear-gradient(top, #e97d90, #ea2c58))
+    &:hover
+        +background-image(linear-gradient(top, #e97d90, #de2a54))
+    &:active
+        +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(black,.5) 0 1px 3px 0px inset)
+.gray-btn
+    color: black !important
+    text-shadow: 0 1px 0 rgba(white,.9)
+    +background-image(linear-gradient(top, #fbf9fa, #f1f0ee))
+    &:hover
+        +background-image(linear-gradient(top, #fbf9fa, #e5e5e3))
+    &:active
+        +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(black,.5) 0 1px 3px 0px inset)
+
+
 // Recommendations
 .recs-holder
     background: rgba(0,0,0,.1)
@@ -133,6 +189,10 @@ strong, b
     width: 72.91666667%
     margin: 40px 0 -3px
     +single-box-shadow(rgba(0,0,0,.3), 0, 0, 2px, 1px, inset)
+    &.not-signed-in
+        padding-top: 50px
+        .main-banner
+            display: block
 
 .rec 
     background: #fff
