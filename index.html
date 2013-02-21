@@ -13,10 +13,55 @@
                 $('.theme-item').removeClass('selected');
                 $(this).addClass('selected');
             });
+            // Show and hide popup
+            $('.sign-up-popup').click(function(event){
+                event.preventDefault();
+                $('.popup-bg,.popup-container').show();
+            });
+            $('.close-popup-btn').click(function(event){
+                event.preventDefault();
+                $('.popup-bg,.popup-container').hide();
+            });
         });
     </script>
 </head>
 <body class="wood">
+
+    <div class="popup-container">
+        <div class="popup-holder">
+            <div class="popup-body">
+                <a class="close-popup-btn"></a>
+                <a href="#" class="close-popup-btn">×</a>
+                <h1>Регистрация</h1>
+                <p>После вашей регистрации мы сможем показывать вам только те рекомендации, которые действительны будут вам интересны.</p>
+                <div class="field">
+                    <label>Ваш email:</label>
+                    <input type="email" class="text-input" value="alexrule7@gmail.com"></input>
+                    <span class="caption">Вы забыли указать email.</span>
+                </div>
+                <div class="field error-field">
+                    <label>Логин:</label>
+                    <input type="text" class="text-input" value="AlexRule7"></input>
+                    <span class="caption">Извините, но это имя уже занято.</span>
+                </div>
+                <div class="field">
+                    <label>Пароль: <a href="#" class="addition-label action-link">показать</a></label>
+                    <input type="password" class="text-input" value=""></input>
+                    <span class="caption">Необходимо указать пароль.</span>
+                </div>
+                <div class="field">
+                    <label>Ваш пол:</label>
+                    <input type="radio" name="gender" id="male" class="radio-btn" checked><label for="male" class="radio-label">Мужской</label>
+                    <input type="radio" name="gender" id="female" class="radio-btn"><label for="female" class="radio-label">Женский</label>
+                </div>
+                <div class="field btn-field">
+                    <a href="#"class="small-btn gray-btn disabled-btn">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-bg"></div>
+
     <header class="site-main-header">
         <div class="inner">
             <a href="/" class="logo"></a>
@@ -98,11 +143,11 @@
             <div class="main-banner">
                 <span class="banner-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore madkdwk Lorem ipsum dolor sekcnpmkp.</span>
                 <div class="banner-btn-holder">
-                    <a href="#" class="small-btn red-btn">Зарегистрироваться</a>
+                    <a href="#" class="small-btn red-btn sign-up-popup">Зарегистрироваться</a>
                     <a href="#" class="small-btn gray-btn">Войти</a>
                 </div>
             </div>
-            
+
             <section class="recs-holder not-signed-in">
                 <article class="rec">
                     <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
