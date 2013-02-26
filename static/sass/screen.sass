@@ -59,7 +59,15 @@ strong, b
     float: left
     height: image-height('logo.png') 
     width: image-width('logo.png')
-
+.logo-title
+    font-weight: bold
+    color: #ffea68
+    position: absolute
+    top: 12px
+    left: 210px
+    z-index: 5
+    &:before
+        content: "— "
 .add-recomendation 
     font-size: .8em
     color: rgba(255,255,255,.7) !important
@@ -90,7 +98,6 @@ strong, b
     +border-left-radius
     position: fixed
     top: 65px
-
 .theme-item 
     display: block
     height: 50px
@@ -109,21 +116,17 @@ strong, b
         background: #fff
         padding-left: 15px
         cursor: default
-
 .theme-icon-holder 
     float: left
     width: 50px
-
 .theme-icn 
     margin: 6px 10px 4px
     +border-radius
     +single-box-shadow(rgba(0,0,0,.8), 0, 2px, 2px, -1px)
-
 .theme-name 
     color: $main-font-color
     float: left
     margin: 17px 10px 0 
-
 .active-arrow 
     +arrow-shape(right)
     position: absolute
@@ -133,6 +136,7 @@ strong, b
     .theme-item.selected &
         right: -25px
         +opacity(1)
+        +single-transition(all, 100ms, ease-in-out, 100ms)
 
 
 // Banner
@@ -156,6 +160,9 @@ strong, b
     width: 350px
     height: 60px
     padding: 0 15px
+    .banner-big-font &
+        font-size: 1.5em
+        width: 400px
 .banner-btn-holder
     position: absolute
     top: 15px
@@ -163,6 +170,9 @@ strong, b
     z-index: 5
     .small-btn
         margin-right: 5px
+        .banner-big-font &
+            font-size: 1.6em
+            padding: 6px 25px
 
 
 // Buttons
@@ -193,7 +203,6 @@ strong, b
     +opacity(.3)
     cursor: default
     pointer-events: none
-
 
 
 // Popup
@@ -287,9 +296,6 @@ strong, b
     top: -1px
 
 
-
-
-
 // Recommendations
 .recs-holder
     background: rgba(0,0,0,.1)
@@ -357,6 +363,7 @@ strong, b
     background: #395993
 .vk-tag
     background: #6185aa
+
 
 // Icons
 i
