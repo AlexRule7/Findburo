@@ -1,5 +1,6 @@
 // Imports
 @import "compass/reset"
+@import "compass/css3/user-interface"
 @import "compass"
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
 
@@ -203,7 +204,29 @@ strong, b
     +opacity(.3)
     cursor: default
     pointer-events: none
-
+.comment-btn
+    font-size: 1.6em
+    text-shadow: 0 1px 0 rgba(white,.9)
+    text-align: center
+    background: #d9d8d5
+    +background-image(linear-gradient(top, #f8f5f5, #d9d8d5))
+    margin-bottom: -15px
+    padding: 12px 0
+    border-top: solid 1px #e8e8e8
+    +border-bottom-radius
+    +box-shadow(rgba(white,.85) 0 1px 0 0 inset)
+    cursor: pointer
+    +user-select(none)
+    &:hover
+        background: #c3c2bf
+        +background-image(linear-gradient(top, #eeecec, #c3c2bf))
+    &:active
+        +box-shadow(rgba(black,.65) 0 2px 5px -3px inset) 
+        +translateY(1px)
+    .icn-comments
+        margin: 0 10px -5px 0
+        +opacity(.6)
+    
 
 // Popup
 .popup-bg
