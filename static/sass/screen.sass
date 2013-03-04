@@ -200,6 +200,14 @@ strong, b
         +background-image(linear-gradient(top, #fbf9fa, #e5e5e3))
     &:active
         +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(black,.5) 0 1px 3px 0px inset)
+.green-btn
+    color: #fff !important
+    text-shadow: 0 1px 0 rgba(black,.3)
+    +background-image(linear-gradient(top, #3f9e63, #1c7a40))
+    &:hover
+        +background-image(linear-gradient(top, #3f9e63, #196e3a))
+    &:active
+        +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(black,.5) 0 1px 3px 0px inset)
 .disabled-btn
     +opacity(.3)
     cursor: default
@@ -226,6 +234,23 @@ strong, b
     .icn-comments
         margin: 0 10px -5px 0
         +opacity(.6)
+.split-buttons-holder
+    text-align: center
+    margin: -20px 100px 30px
+    .small-btn
+        +box-sizing($bs)
+        float: left
+        padding: 8px 10px
+        +border-radius(0)
+        &:first-child
+            +border-left-radius
+        &:last-child
+            +border-right-radius
+.double-btn .small-btn
+    font-size: 1.5em
+    width: 50%
+    i
+        margin: 0 8px -4px 0
     
 
 // Popup
@@ -337,16 +362,16 @@ strong, b
     +border-radius
     +single-box-shadow(rgba(0,0,0,.35), 0, 1px, 2px, 0px)
     position: relative
-    &:after 
-        content: ''
-        background: rgba(255,255,255,.2)
-        width: 80%
-        height: 1px
-        margin: 0 auto
-        +single-box-shadow(rgba(0,0,0,.07), 0, 1px, 0, 0)
-        position: absolute
-        bottom: -25px
-        left: 10%
+    // &:after 
+    //     content: ''
+    //     background: rgba(255,255,255,.2)
+    //     width: 80%
+    //     height: 1px
+    //     margin: 0 auto
+    //     +single-box-shadow(rgba(0,0,0,.07), 0, 1px, 0, 0)
+    //     position: absolute
+    //     bottom: -25px
+    //     left: 10%
     h1 
         font-size: 2.2em
         line-height: 1.2em
