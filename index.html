@@ -13,14 +13,17 @@
                 $('.theme-item').removeClass('selected');
                 $(this).addClass('selected');
             });
-            // Show and hide popup
+            // Show popup
             $('.sign-up-popup').click(function(event){
                 event.preventDefault();
-                $('.popup-bg,.popup-container').show();
+                $('.popup-container').addClass('showing');
+                $('html').css({'overflow':'hidden'})
             });
+            // Hide popup
             $('.close-popup-btn').click(function(event){
                 event.preventDefault();
-                $('.popup-bg,.popup-container').hide();
+                $('.popup-container').removeClass('showing');
+                $('html').css({'overflow':''})
             });
         });
     </script>
@@ -30,10 +33,10 @@
     <div class="popup-container">
         <div class="popup-holder">
             <div class="popup-body">
-                <a class="close-popup-btn"></a>
                 <a href="#" class="close-popup-btn">×</a>
                 <h1>Регистрация</h1>
                 <p>После вашей регистрации мы сможем показывать вам только те рекомендации, которые действительны будут вам интересны.</p>
+                <p><a href="#">Войдите</a>, если у вас уже есть аккаунт.</p>
                 <div class="field">
                     <label>Ваш email:</label>
                     <input type="email" class="text-input" value="alexrule7@gmail.com"></input>
@@ -60,12 +63,22 @@
             </div>
         </div>
     </div>
-    <div class="popup-bg"></div>
 
     <header class="site-main-header">
         <div class="inner">
             <a href="/" class="logo"></a>
-            <h1 class="logo-title">Лучшие игры по мнению ваших друзей</h1>
+            <!-- <h1 class="logo-title">Лучшие игры по мнению ваших друзей</h1> -->
+            <div class="user-box">
+                <span class="user-name">Alexander</span><i class="icn-user-arrow"></i>
+                <div class="user-box-items-holder">
+                    <a href="#" class="user-box-item">Избранное</a>
+                    <a href="#" class="user-box-item">Настройки</a>
+                    <div class="hor-splitter"></div>
+                    <a href="#" class="user-box-item">Выход</a>
+                </div>
+            </div>
+           <!--  <a href="#" class="nav-item">Войти</a>
+            <a href="#" class="nav-item">Зарегистрироваться</a> -->
             <a href="#" class="add-recomendation">Добавить рекомендацию <i class="icn-plus"></i></a>
         </div>
     </header>
