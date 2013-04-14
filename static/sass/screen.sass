@@ -7,9 +7,9 @@
 
 // Variables 
 $default-border-radius: 5px
-$main-font-color: black
-$icons: sprite-map("icons/*.png")
-$bs: border-box
+$main-font-color      : black
+$icons                : sprite-map("icons/*.png", $layout: smart)
+$bs                   : border-box
 
 
 // Mixins
@@ -30,10 +30,13 @@ body
     line-height: 1.8em
     &.wood
         background: image-url('bg.jpg') repeat #e7d1ae
+        background-attachment: fixed
     &.gray
         background: image-url('bg3.png') repeat #e7d1ae
+        background-attachment: fixed
     &.blue
         background: image-url('bg2.png') repeat #e7d1ae
+        background-attachment: fixed
 .site-main-header
     font-size: 1.8em
     +background(linear-gradient(top, #464c56 ,#464c57 35%, #393f48))
@@ -397,7 +400,6 @@ x:-o-prefocus, .popup-container // opera fix
     margin: 3px 0 0
     .error-field &
         display: block
-.radio-label
 .text-input
     font-family: 'PT Sans', sans-serif
     font-size: 1.8em
@@ -413,6 +415,10 @@ x:-o-prefocus, .popup-container // opera fix
         +box-shadow(rgba(black,.3) 0 0 2px 0, rgba(70,169,226,.9) 0 0 5px 0)
     .error-field &
         background: rgba(red,.05)
+.text-area
+    @extend .text-input
+    min-height: 150px
+    resize: vertical
 .radio-btn
     margin: 0 7px 0 10px
     position: relative
@@ -486,6 +492,14 @@ x:-o-prefocus, .popup-container // opera fix
     background: #395993
 .vk-tag
     background: #6185aa
+
+
+// Login page
+.single-page-body
+    @extend .popup-body
+    display: block
+    padding-top: 40px
+    +border-radius(0)
 
 
 // Icons
