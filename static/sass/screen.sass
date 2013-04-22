@@ -247,6 +247,35 @@ x:-o-prefocus, .user-box-items-holder // opera fix
             padding: 6px 25px
 
 
+// Filters
+.filters-holder
+    margin: 30px 50px 0
+    .big-btn
+        text-align: center
+        +box-sizing($bs)
+        float: left
+        width: 25%
+        margin: 0
+        +border-radius(0)
+        +single-box-shadow(rgba(0,0,0,.45), 0, 1px, 2px, 0px)
+        &:first-child
+            +border-left-radius(3px)
+        &:last-child
+            +border-right-radius(3px)
+        &.selected
+            background: #e5e5e3
+            +box-shadow(rgba(black,.2) 0 0 0 1px, rgba(black,.45) 0 2px 5px 0px inset)
+            cursor: default
+.filter-arrow-down
+    +arrow-shape(bottom)
+    display: inline-block
+    margin-left: 2px
+    border-width: 6px
+    border-top-color: $main-font-color
+    position: relative
+    top: -1px
+
+
 // Buttons
 .small-btn
     font-size: 1.4em
@@ -255,6 +284,14 @@ x:-o-prefocus, .user-box-items-holder // opera fix
     padding: 4px 10px
     +border-radius(3px)
     +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(white,.3) 0 2px 0px 0px)
+    +user-select(none)
+    cursor: pointer
+.big-btn
+    @extend .small-btn
+    font-size: 1.7em
+    font-weight: normal
+    padding: 10px 15px 9px
+    +box-shadow(rgba(black,.2) 0 0 0 1px, rgba(white,.3) 0 2px 0px 0px)
 .red-btn
     color: #fff !important
     text-shadow: 0 1px 0 rgba(black,.3)
