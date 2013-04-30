@@ -31,6 +31,14 @@
                 el.closest('.poll').addClass('poll-results');
                 el.closest('.poll-hide-mask').removeClass('is-active');
             });
+            $(".poll").hover(
+                function () {
+                    $(this).addClass("hovered");
+                },
+                function () {
+                    $(this).removeClass("hovered");
+                }
+            );
         });
     </script>
 </head>

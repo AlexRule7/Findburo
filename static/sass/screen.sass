@@ -28,6 +28,7 @@ body
     font-family: 'PT Sans', sans-serif
     font-size: 62.5%
     line-height: 1.8em
+    -webkit-text-size-adjust: 100%
     &.wood
         background: image-url('bg.jpg') repeat #e7d1ae
         background-attachment: fixed
@@ -570,7 +571,7 @@ x:-o-prefocus, .popup-container // opera fix
     .poll-hide-mask
         &.is-active
             display: none
-    &:hover
+    &:hover, &.hovered
         .poll-hide-mask
             display: block
 .poll-question
