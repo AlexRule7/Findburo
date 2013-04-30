@@ -25,6 +25,12 @@
                 $('.popup-container').removeClass('showing');
                 $('html').css({'overflow':''})
             });
+            $('.poll-answer').click(function(event) {
+                event.preventDefault();
+                var el = $(this);
+                el.closest('.poll').addClass('poll-results');
+                el.closest('.poll-hide-mask').removeClass('is-active');
+            });
         });
     </script>
 </head>
@@ -177,10 +183,118 @@
                 </section>
 
                 <article class="rec">
+                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6417/31684961.0/0_57719_2d4c6a7_L.jpg" alt=""></a>
+                    <h1>Игра Cut the Rope</h1>
+                    <p>Самая знаменитая игра головоломка Cut the Rope. Со помощью этой знаменитой игры можно развивать логику и абстрактное мышление.</p>
+                    <p>В коробке сидит маленькое зелёное существо АмНям, которое надо кормить леденцами. Леденцы болтаются на веревочках и их надо правильно перерезать, чтобы леденец упал точно в пасть АмНяма, а не мимо.</p>
+                    <p><a href="#">Официальная страница игры</a></p>
+                    <p>
+                        <a class="tag home-tag"href="#">www.cuttherope.ie</a>
+                        <a class="tag apple-tag"href="#">App Store</a>
+                        <a class="tag android-tag"href="#">Android</a>
+                    </p>
+                    <div class="poll-holder">
+                        <div class="rec-mark-holder">
+                            <h1>8,3</h1>
+                            <h2>хороший <br /> совет</h2>
+                        </div>
+
+                        <div class="poll group">
+                            <h1 class="poll-question">Нравится ли вам эта игра?</h1>
+                            <div class="poll-hide-mask">
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:35%"></div>
+                                        <span class="poll-legend">35% – 80</span>
+                                    </div>
+                                    <span class="poll-answer-text">Да, хочу поиграть в эту игру</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:53%"></div>
+                                        <span class="poll-legend">53% – 122</span>
+                                    </div>
+                                    <span class="poll-answer-text">Уже играл и понравилось</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:12%"></div>
+                                        <span class="poll-legend">12% – 29</span>
+                                    </div>
+                                    <span class="poll-answer-text">Игра мне не интересна</span>
+                                </div>
+                            </div>
+                            <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 231</div>
+                        </div>
+
+                        <div class="poll group">
+                            <h1 class="poll-question">Нравится ли вам этот совет?</h1>
+                            <div class="poll-hide-mask is-active">                                    
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:50%"></div>
+                                        <span class="poll-legend">50% – 103</span>
+                                    </div>
+                                    <span class="poll-answer-text">Да, хороший и информативный</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:30%"></div>
+                                        <span class="poll-legend">30% – 74</span>
+                                    </div>
+                                    <span class="poll-answer-text">Неплохой</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:20%"></div>
+                                        <span class="poll-legend">20% – 45</span>
+                                    </div>
+                                    <span class="poll-answer-text">Совсем не нравится</span>
+                                </div>
+                            </div>
+                            <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 207</div>
+                        </div>
+
+                        <div class="poll group">
+                            <h1 class="poll-question">Посоветовали бы друзьям?</h1>
+                            <div class="poll-hide-mask is-active">
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:70%"></div>
+                                        <span class="poll-legend">70% – 145</span>
+                                    </div>
+                                    <span class="poll-answer-text">Точно да</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:4%"></div>
+                                        <span class="poll-legend">04% – 1</span>
+                                    </div>
+                                    <span class="poll-answer-text">Возможно</span>
+                                </div>
+                                <div class="poll-answer">
+                                    <div class="poll-radiobtn">
+                                        <div class="poll-bar" style="width:26%"></div>
+                                        <span class="poll-legend">26% – 32</span>
+                                    </div>
+                                    <span class="poll-answer-text">Точно нет</span>
+                                </div>
+                            </div>
+                            <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 189</div>
+                        </div>
+                    </div>
+                    <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div>
+                </article>
+
+                <!--  <div class="split-buttons-holder double-btn group">
+                    <a href="#" class="small-btn green-btn"><i class="icn-add-rec"></i>Добавить рекомендацию</a>
+                    <a href="#" class="small-btn green-btn"><i class="icn-discussion"></i>Создать обсуждение</a>
+                </div> -->
+
+                <article class="rec">
                     <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6416/31684961.0/0_57718_8b34c7d4_L.jpg" alt=""></a>
                     <h1>Angry Birds</h1>
-                    <p><b>Angry Birds</b> — это игра уже по праву может считаться легендарной. На ее счету огромное количество рекордов, никому не известные разработчики Angry Birds стали популярными на весь мир и до сих пор эта игра прорывается в топы App Store. Стоит признать, что некоторое время назад пользователи оценивали успешность мобильной операционной платформы по наличию в ней именно этой игры.</p>
-                    <p>На днях стало известно, что разработчики собираются выпустить новую версию своей популярной аркады.</p>
+                    <p><b>Angry Birds</b> — это игра уже по праву может считаться легендарной. На ее счету огромное количество рекордов, никому не известные разработчики Angry Birds стали популярными на весь мир и до сих пор эта игра прорывается в топы App Store. Стоит признать, что некоторое время назад пользователи оценивали успешность мобильной операционной платформы по наличию в ней этой игры.</p>
                     <p><a href="#">Видеоролики Angry Birds по-русски</a></p>
                     <p>
                         <a class="tag home-tag"href="#">www.angrybirds.com</a>
@@ -194,24 +308,6 @@
                     <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div>
                 </article>
 
-                <div class="split-buttons-holder double-btn group">
-                    <a href="#" class="small-btn green-btn"><i class="icn-add-rec"></i>Добавить рекомендацию</a>
-                    <a href="#" class="small-btn green-btn"><i class="icn-discussion"></i>Создать обсуждение</a>
-                </div>
-
-                <article class="rec">
-                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6417/31684961.0/0_57719_2d4c6a7_L.jpg" alt=""></a>
-                    <h1>Cut the Rope</h1>
-                    <p>Самая знаменитая игра головоломка Cut the Rope. Со помощью этой знаменитой игры можно развивать логику и абстрактное мышление. Игра основана на физике.</p>
-                    <p>В коробке сидит маленькое зелёное существо АмНям, которое надо кормить леденцами. Леденцы болтаются на веревочках и их надо правильно перерезать, чтобы леденец упал точно в пасть АмНяма, а не мимо.</p>
-                    <p><a href="#">Официальная страница игры</a></p>
-                    <p>
-                        <a class="tag home-tag"href="#">www.cuttherope.ie</a>
-                        <a class="tag apple-tag"href="#">App Store</a>
-                        <a class="tag android-tag"href="#">Android</a>
-                    </p>
-                    <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div>
-                </article>
             </section>
 
         </div><!-- inner -->
