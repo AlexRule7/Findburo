@@ -172,7 +172,7 @@ x:-o-prefocus, .user-box-items-holder // opera fix
     width: 260px
     +border-left-radius
     position: fixed
-    top: 65px
+    top: 60px
 .theme-item 
     display: block
     height: 50px
@@ -252,7 +252,18 @@ x:-o-prefocus, .user-box-items-holder // opera fix
 
 // Filters
 .filters-holder
-    margin: 30px 50px 0
+    +background-image(linear-gradient(top, rgba(white, .95), rgba(white, .9)))
+    text-align: center
+    display: block
+    width: 600px
+    margin: -30px 50px 10px
+    padding: 5px 0
+    +border-radius
+    +box-shadow(rgba(black,.4) 0 1px 2px 0)
+    position: fixed
+    // margin: 30px 50px 0
+    // position: relative
+    z-index: 5
     .big-btn
         text-align: center
         +box-sizing($bs)
@@ -260,23 +271,54 @@ x:-o-prefocus, .user-box-items-holder // opera fix
         width: 25%
         margin: 0
         +border-radius(0)
-        +single-box-shadow(rgba(0,0,0,.45), 0, 1px, 2px, 0px)
-        &:first-child
+        +box-shadow(rgba(0,0,0,.45) 0 1px 2px 0px)
+        &.first
             +border-left-radius(3px)
-        &:last-child
+        &.last
             +border-right-radius(3px)
         &.selected
-            background: #e5e5e3
-            +box-shadow(rgba(black,.2) 0 0 0 1px, rgba(black,.45) 0 2px 5px 0px inset)
-            cursor: default
+            +box-shadow(rgba(0,0,0,.45) 0 1px 2px 0px, rgba(36, 194, 50, .3) 0 1px 20px 6px inset)
+    li
+        font-size: 1.7em
+        color: rgba(black,.7)
+        +box-sizing($bs)
+        display: inline-block
+        margin: 0 3px
+        padding: 5px 8px
+        +border-radius()
+        cursor: pointer
+        &:hover, &.selected
+            background: rgba(black,.2)
+            
+            
+
+        
 .filter-arrow-down
     +arrow-shape(bottom)
     display: inline-block
-    margin-left: 2px
+    margin-left: 5px
     border-width: 6px
     border-top-color: $main-font-color
     position: relative
     top: -1px
+.filter-list
+    font-size: 1.6em
+    text-shadow: 0 1px 0 rgba(white,.9)
+    background: #f1f0ee
+    +background-image(linear-gradient(top, #fbf9fa, #f1f0ee))
+    width: 100%
+    padding: 10px 0
+    +border-radius
+    +box-shadow(rgba(black,.45) 0 2px 5px 0)
+    position: absolute
+    top: 45px
+    z-index: 10
+    > li
+        padding: 5px 5%
+        cursor: pointer
+        &:hover
+            background: white
+
 
 
 // Buttons
@@ -286,7 +328,7 @@ x:-o-prefocus, .user-box-items-holder // opera fix
     display: inline-block
     padding: 4px 10px
     +border-radius(3px)
-    +box-shadow(rgba(black,.4) 0 0 0 1px, rgba(white,.3) 0 2px 0px 0px)
+    +box-shadow(rgba(black,.2) 0 0 0 1px, rgba(white,.3) 0 2px 0px 0px)
     +user-select(none)
     cursor: pointer
 .big-btn
@@ -347,21 +389,28 @@ x:-o-prefocus, .user-box-items-holder // opera fix
         +opacity(.6)
 .split-buttons-holder
     text-align: center
-    margin: -20px 100px 30px
+    margin: 0px 5% 20px
     .small-btn
+        font-size: 1.5em
         +box-sizing($bs)
         float: left
-        padding: 8px 10px
+        padding: 6px 10px
         +border-radius(0)
         &:first-child
             +border-left-radius
         &:last-child
-            +border-right-radius
+            +border-right-radius    
+        i
+            margin: 0 8px -4px 0
+            +opacity(.5)
+        &:hover
+            i
+            +opacity(1)
 .double-btn .small-btn
-    font-size: 1.5em
-    width: 50%
-    i
-        margin: 0 8px -4px 0
+    width: 50%            
+.triple-btn .small-btn
+    width: 33.3%
+
     
 
 // Popup
@@ -473,14 +522,15 @@ x:-o-prefocus, .popup-container // opera fix
     width: 72.91666667%
     margin: 40px 0 -3px
     +single-box-shadow(rgba(0,0,0,.3), 0, 0, 2px, 1px, inset)
-    &.not-signed-in
-        padding-top: 50px
+    padding-top: 55px
+    // &.not-signed-in
+    //     padding-top: 50px
 
 .rec 
     background: #fff
     width: 85.71428571%
     margin: 25px auto 50px
-    padding-bottom: 15px
+    padding-bottom: 8px
     +border-radius
     +single-box-shadow(rgba(0,0,0,.35), 0, 1px, 2px, 0px)
     position: relative
@@ -520,11 +570,12 @@ x:-o-prefocus, .popup-container // opera fix
 .tag 
     font-size: 0.9em
     color: white !important
-    display: inline-block
+    background: #346cd2 !important
+    display: none
     margin: 0 5px 5px 0
     padding: 3px 7px 2px
     +border-radius(5px)
-    +opacity(.9)
+    +opacity(.5)
     &:hover
         +opacity(100)
 .youtube-tag
@@ -545,7 +596,7 @@ x:-o-prefocus, .popup-container // opera fix
 
 // Polls
 .poll-holder
-    min-height: 150px
+    min-height: 130px
     margin-top: 10px
     padding-bottom: 10px
     border-top: solid 2px #e8e8e8
@@ -585,7 +636,7 @@ x:-o-prefocus, .popup-container // opera fix
 .poll-question
     font-size: 1.7em
     font-weight: bold
-    padding-top: 15px
+    padding-top: 20px
     padding-bottom: 3px
 .poll-answer
     min-height: 18px
@@ -606,7 +657,7 @@ x:-o-prefocus, .popup-container // opera fix
     +border-radius(10px)
     +box-shadow(rgba(black, .5) 0 1px 2px 0 inset)
     position: absolute
-    top: 1px
+    top: 2px
     left: 0
     +transition(all 100ms ease-in-out 1ms)
 .poll-answer-text

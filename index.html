@@ -39,6 +39,10 @@
                     $(this).removeClass("hovered");
                 }
             );
+            $('.filters-holder .big-btn').click(function() {
+                var el = $(this);
+                el.addClass('selected').siblings().removeClass('selected');
+            });
         });
     </script>
 </head>
@@ -53,12 +57,12 @@
                 <p><a href="#">Войдите</a>, если у вас уже есть аккаунт.</p>
                 <div class="field">
                     <label>Ваш email:</label>
-                    <input type="email" class="text-input" value="alexrule7@gmail.com"></input>
+                    <input type="email" class="text-input" value="alexrule7@gmail.com" />
                     <span class="caption">Вы забыли указать email.</span>
                 </div>
                 <div class="field error-field">
                     <label>Логин:</label>
-                    <input type="text" class="text-input" value="AlexRule7"></input>
+                    <input type="text" class="text-input" value="AlexRule7" />
                     <span class="caption">Извините, но это имя уже занято.</span>
                 </div>
                 <div class="field">
@@ -68,7 +72,7 @@
                 </div>
                 <div class="field">
                     <label>Пароль: <a href="#" class="addition-label action-link">показать</a></label>
-                    <input type="password" class="text-input" value=""></input>
+                    <input type="password" class="text-input" value="" />
                     <span class="caption">Необходимо указать пароль.</span>
                 </div>
                 <div class="field">
@@ -107,6 +111,20 @@
 
             <aside class="themes-list-holder">
                 <ul class="theme-list">
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-all"></i>
+                        </div>
+                        <span class="theme-name">Все</span>
+                    </li>
+                    <li class="theme-item">
+                        <div class="active-arrow"></div>
+                        <div class="theme-icon-holder">
+                            <i class="theme-icn icn-faverec"></i>
+                        </div>
+                        <span class="theme-name">Мои рекомендации</span>
+                    </li>
                     <li class="theme-item">
                         <div class="active-arrow"></div>
                         <div class="theme-icon-holder">
@@ -161,7 +179,7 @@
                         <div class="theme-icon-holder">
                             <i class="theme-icn icn-interesting"></i>
                         </div>
-                        <span class="theme-name">Интересное</span>
+                        <span class="theme-name">Статьи и видео</span>
                     </li>
                     <li class="theme-item">
                         <div class="active-arrow"></div>
@@ -173,26 +191,40 @@
                 </ul>
             </aside>
 
-            <div class="main-banner banner-big-font">
+            <!-- <div class="main-banner banner-big-font">
                 <span class="banner-text">Узнайте, какие развлечения понравились больше всего вашим друзьям из Вконтакте и Facebook.</span>
                 <div class="banner-btn-holder">
                     <a href="#" class="small-btn red-btn sign-up-popup">Узнать</a>
-                    <!-- <a href="#" class="small-btn gray-btn">Войти</a> -->
+                    <a href="#" class="small-btn gray-btn">Войти</a>
                 </div>
-            </div>
+            </div> -->
 
             <section class="recs-holder not-signed-in">
 
-                <section class="filters-holder group">
-                    <span class="big-btn gray-btn selected">Нравится всем</span>
+                <!-- <section class="filters-holder group">
+                    <span class="big-btn gray-btn selected first">Лучшие</span>
                     <span class="big-btn gray-btn">Девушкам</span>
                     <span class="big-btn gray-btn">Мужчинам</span>
-                    <span class="big-btn gray-btn">Еще <span class="filter-arrow-down"></span></span>
-                </section>
+                    <span class="big-btn gray-btn last">Популярные<span class="filter-arrow-down"></span></span>
+                    <ul class="filter-list">
+                        <li>Новые</li>
+                        <li>Выгодные</li>
+                        <li>Популярные</li>
+                    </ul>
+                </section> -->
+
+                <ul class="filters-holder">
+                    <li class="selected">Лучшие</li>
+                    <li>Девушкам</li>
+                    <li>Мужчинам</li>
+                    <li>Новые</li>
+                    <li>Выгодные</li>
+                    <li>Популярные</li>
+                </ul>
 
                 <article class="rec">
-                    <a href="#"><img class="rec-illustration" src="http://img-fotki.yandex.ru/get/6417/31684961.0/0_57719_2d4c6a7_L.jpg" alt=""></a>
-                    <h1>Игра Cut the Rope <a href="#" class="small-btn green-btn">Запомнить</a></h1>
+                    <a href="#"><img class="rec-illustration" src="http://apple.hdblog.it/wp-content/uploads/2013/04/Cut-the-Rope-.jpg" alt=""></a>
+                    <h1>Игра Cut the Rope</h1>
                     <p>Самая знаменитая игра головоломка Cut the Rope. Со помощью этой знаменитой игры можно развивать логику и абстрактное мышление.</p>
                     <p>В коробке сидит маленькое зелёное существо АмНям, которое надо кормить леденцами. Леденцы болтаются на веревочках и их надо правильно перерезать, чтобы леденец упал точно в пасть АмНяма, а не мимо.</p>
                     <p><a href="#">Официальная страница игры</a></p>
@@ -201,6 +233,11 @@
                         <a class="tag apple-tag"href="#">App Store</a>
                         <a class="tag android-tag"href="#">Android</a>
                     </p>
+                    <div class="split-buttons-holder triple-btn group"><!-- triple-btn or double-btn to switch classes-->
+                        <a href="#" class="small-btn gray-btn"><i class="icn-fave"></i>Запомнить</a>
+                        <a href="#" class="small-btn gray-btn"><i class="icn-buy"></i>Купить</a>
+                        <a href="#" class="small-btn gray-btn"><i class="icn-comments"></i>Комментарии</a>
+                    </div>
                     <div class="poll-holder">
                         <div class="rec-mark-holder">
                             <h1>8,3</h1>
@@ -234,7 +271,7 @@
                             <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 231</div>
                         </div>
 
-                        <div class="poll group">
+                        <!-- <div class="poll group">
                             <h1 class="poll-question">Нравится ли вам этот совет?</h1>
                             <div class="poll-hide-mask is-active">                                    
                                 <div class="poll-answer">
@@ -260,9 +297,9 @@
                                 </div>
                             </div>
                             <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 207</div>
-                        </div>
+                        </div> -->
 
-                        <div class="poll group">
+                        <!-- <div class="poll group">
                             <h1 class="poll-question">Посоветовали бы друзьям?</h1>
                             <div class="poll-hide-mask is-active">
                                 <div class="poll-answer">
@@ -288,12 +325,12 @@
                                 </div>
                             </div>
                             <div class="poll-participants"><span class="sub-dark-color">Проголосовало:</span> 189</div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div>
+                    <!-- <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div> -->
                 </article>
 
-                <!--  <div class="split-buttons-holder double-btn group">
+                 <!-- <div class="split-buttons-holder double-btn group">
                     <a href="#" class="small-btn green-btn"><i class="icn-add-rec"></i>Добавить рекомендацию</a>
                     <a href="#" class="small-btn green-btn"><i class="icn-discussion"></i>Создать обсуждение</a>
                 </div> -->
@@ -312,7 +349,7 @@
                         <a class="tag fb-tag"href="#">Facebook</a>
                         <a class="tag vk-tag"href="#">vKontakte</a>
                     </p>
-                    <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div>
+                    <!-- <div class="comment-btn"><i class="icn-comments"></i>Комментарии…</div> -->
                 </article>
 
             </section>
