@@ -191,6 +191,17 @@ x:-o-prefocus, .user-box-items-holder // opera fix
         background: #fff
         padding-left: 15px
         cursor: default
+.notification-counter
+    font-size: .8em
+    font-weight: bold 
+    color: white
+    background: #cf4a44
+    padding: 0 6px
+    border: solid 2px white
+    +border-radius(10px)
+    position: absolute
+    top: 16px
+    right: 20px
 .theme-icon-holder 
     float: left
     width: 50px
@@ -403,7 +414,7 @@ x:-o-prefocus, .user-box-items-holder // opera fix
         i
             margin: 0 8px -4px 0
             +opacity(.5)
-        &:hover
+        &:hover, .icn-fave-active
             i
             +opacity(1)
 .double-btn .small-btn
