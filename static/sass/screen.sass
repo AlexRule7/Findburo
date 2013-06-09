@@ -405,6 +405,7 @@ x:-o-prefocus, .user-box-items-holder // opera fix
         font-size: 1.5em
         +box-sizing($bs)
         float: left
+        min-height: 2.15em
         padding: 6px 10px
         +border-radius(0)
         &:first-child
@@ -670,17 +671,16 @@ x:-o-prefocus, .popup-container // opera fix
     position: absolute
     top: 2px
     left: 0
-    +transition(all 100ms ease-in-out 1ms)
 .poll-answer-text
     font-size: 1.4em
     display: block
     margin-top: 5px
-    +translate(0,0,0)
-    +transition(all 100ms ease-in-out 1ms)
 .poll-participants
-    font-size: 1.25em
+    font-size: 1.5em
+    font-weight: bold
     float: left
     clear: both
+    margin-top: .5em
 .poll-bar
     display: none
     background: #12be7b
